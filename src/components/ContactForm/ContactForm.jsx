@@ -30,8 +30,7 @@ export function ContactForm() {
       : dispatch(addContact(newContact));
     
         reset();
-        
-  };
+          };
 
   const reset = () => {
     setName ('');
