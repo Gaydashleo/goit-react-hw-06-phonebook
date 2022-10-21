@@ -18,11 +18,11 @@ export function ContactForm({ onClose}) {
   const onSubmitForm = e => {
     e.preventDefault();
 
-     const newContact = {
+    const newContact = {
       id: nanoid(),
       name,
       number,
-     };
+    };
     
     contacts.some(contact => contact.name === name)
       ? Report.warning(`${name}`,
