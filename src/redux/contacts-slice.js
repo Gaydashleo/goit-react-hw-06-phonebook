@@ -24,7 +24,7 @@ const persistConfig = {
   blacklist: ['filter'],
 };
 
-export const persistContactReducer = persistReducer(
+export const persisteContactReducer = persistReducer(
   persistConfig,
   contactsSlice.reducer,
 );

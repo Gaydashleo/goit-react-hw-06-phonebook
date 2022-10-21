@@ -14,7 +14,7 @@ export function App() {
     { id: 'id-3', name: 'Eden Clements', number: '645-17-79' },
     { id: 'id-4', name: 'Annie Copeland', number: '227-91-26' },]);
   
-  const [filter, setFilter] = useState('');
+  // const [filter, setFilter] = useState('');
 
 
   // Перевіряємо localStorage чи є контакти
@@ -58,24 +58,24 @@ export function App() {
   // };
 
     // Вертає результат фільтра
-    const getContacts = () => {
-      const normalizedFilter = filter.toLowerCase();
-      return contacts.filter(contact =>
-        contact.name.toLowerCase().includes(normalizedFilter));
-    };
+    // const getContacts = () => {
+    //   const normalizedFilter = filter.toLowerCase();
+    //   return contacts.filter(contact =>
+    //     contact.name.toLowerCase().includes(normalizedFilter));
+    // };
 
-    const visibleContacts = getContacts();
+    // const visibleContacts = getContacts();
 
     // Видаляємо контакт з списку
- const deleteContact = contactId => {
-    setContacts(contacts =>
-      contacts.filter(contact => contact.id !== contactId)
-    );
-  };
+//  const deleteContact = contactId => {
+//     setContacts(contacts =>
+//       contacts.filter(contact => contact.id !== contactId)
+//     );
+//   };
 
-  const handleFilter = e => {
-    setFilter(e.currentTarget.value);
-  };
+  // const handleFilter = e => {
+  //   setFilter(e.currentTarget.value);
+  // };
   
     return (
       <Container>
@@ -86,10 +86,9 @@ export function App() {
         </Section>
         <Section title="Contacts">
           <Titleh2>Contacts</Titleh2>
-          <Filter value={filter} onChange={handleFilter} />
+          <Filter  />
           <ContactList
-            contacts={visibleContacts}
-            onDeleteContact={deleteContact}
+          
           />
         </Section>
       </Container>
