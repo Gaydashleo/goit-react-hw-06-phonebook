@@ -14,6 +14,8 @@ export const Titleh1 = styled.h1`
   margin-bottom: 15px;
   font-size: 28px;
   font-weight: bold;
+  
+
 `;
 
 export const Titleh2 = styled.h2`
