@@ -6,6 +6,7 @@ import { ContactList } from 'components/ContactList/ContactList';
 import { Container, Section, Titleh1, Titleh2 } from './App.styled';
 import { useState,useEffect } from 'react';
 
+
 export function App() {
   const [contacts, setContacts] = useState([
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },

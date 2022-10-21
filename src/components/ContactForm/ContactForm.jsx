@@ -1,6 +1,8 @@
 import PropTypes from 'prop-types';
 import React,{useState} from 'react';
 import { Form, Label, Input, Button } from './ContactForm.styled';
+import { useSelector, useDispatch } from 'react-redux';
+import { getContacts } from 'redux/contacts-slice';
 
 export function ContactForm({ onSubmit}) {
   const [name, setName] = useState('');
@@ -9,6 +11,9 @@ export function ContactForm({ onSubmit}) {
 
   const handleChange = e => {
     const { name, value } = e.currentTarget;
+
+    // const contacts = useSelector(getContacts);
+    // const dispatch = useDispatch();
     
     switch (name) {
       case 'name': setName(value);
