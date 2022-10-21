@@ -1,5 +1,5 @@
 import React from 'react';
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import { ContactForm } from 'components/ContactForm/ContactForm';
 import { Filter } from 'components/Filter/Filter';
 import { ContactList } from 'components/ContactList/ContactList';
@@ -35,27 +35,27 @@ export function App() {
 
   // Додає контакт в список
 
-    const addContact = ({ name, number }) => {
-    const findName = contacts.find(
-      contact => contact.name.toLowerCase() === name.toLowerCase()
-    );
-    if (findName) {
-      return alert(`${name} is already in contacts.`);
-    }
+  // const addContact = ({ name, number }) => {
+  //     const findName = contacts.find(
+  //     contact => contact.name.toLowerCase() === name.toLowerCase()
+  //   );
+  //   if (findName) {
+  //     return alert(`${name} is already in contacts.`);
+  //   }
 
-    const findNumber = contacts.find(contact => contact.number === number);
-    if (findNumber) {
-      return alert(`This phone number is already in use.`);
-    }
+  //   const findNumber = contacts.find(contact => contact.number === number);
+  //   if (findNumber) {
+  //     return alert(`This phone number is already in use.`);
+  //   }
 
-    const newContact = {
-      id: nanoid(),
-      name,
-      number,
-    };
+  //   const newContact = {
+  //     id: nanoid(),
+  //     name,
+  //     number,
+  //   };
 
-    setContacts(contacts => [...contacts, newContact]);
-  };
+  //   setContacts(contacts => [...contacts, newContact]);
+  // };
 
     // Вертає результат фільтра
     const getContacts = () => {
@@ -81,7 +81,8 @@ export function App() {
       <Container>
         <Section title="Phonebook">
           <Titleh1>Phonebook</Titleh1>
-          <ContactForm onSubmit={addContact} />
+          <ContactForm />
+          {/* <ContactForm onSubmit={addContact} /> */}
         </Section>
         <Section title="Contacts">
           <Titleh2>Contacts</Titleh2>
