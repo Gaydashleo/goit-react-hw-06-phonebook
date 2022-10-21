@@ -1,4 +1,5 @@
-import {useState} from 'react';
+import PropTypes from 'prop-types';
+import { useState } from 'react';
 import { Form, Label, Input, Button } from './ContactForm.styled';
 import { Report } from 'notiflix/build/notiflix-report-aio';
 import { nanoid } from 'nanoid';
@@ -30,7 +31,7 @@ export function ContactForm({ onClose}) {
       : dispatch(addContact(newContact));
     
         reset();
-        onClose();
+        
   };
 
   const reset = () => {
@@ -71,4 +72,7 @@ export function ContactForm({ onClose}) {
     );
   }
 
+// ContactForm.propTypes = {
+//   onClose: PropTypes.func,
+// };
 
