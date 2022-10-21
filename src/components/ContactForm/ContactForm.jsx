@@ -1,4 +1,3 @@
-import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Form, Label, Input, Button } from './ContactForm.styled';
 import { Report } from 'notiflix/build/notiflix-report-aio';
@@ -6,7 +5,7 @@ import { nanoid } from 'nanoid';
 import { useSelector, useDispatch } from 'react-redux';
 import { addContact, getContacts } from 'redux/contacts-slice';
 
-export function ContactForm({ onClose}) {
+export function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
   const contacts = useSelector(getContacts);
@@ -72,7 +71,5 @@ export function ContactForm({ onClose}) {
     );
   }
 
-// ContactForm.propTypes = {
-//   onClose: PropTypes.func,
-// };
+
 
