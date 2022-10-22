@@ -23,16 +23,16 @@ export function ContactForm() {
       name,
       number,
     };
-    
-    contacts.some(contact => contact.name === name)
+
+        contacts.some(contact => contact.name.toLowerCase() === name.toLowerCase())
       ? Report.warning(`${name}`,
-        'This user is already in contacts.',)
+        'This user is already in contacts.','OK')
       : dispatch(addContact(newContact));
     
         reset();
           };
-
-  const reset = () => {
+    
+    const reset = () => {
     setName ('');
     setNumber ('');
   };

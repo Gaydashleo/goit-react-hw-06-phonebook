@@ -34,3 +34,4 @@ export const { addContact, deleteContact, changeFilter } = contactsSlice.actions
 export const getContacts = state => state.contacts.contacts;
 export const getFilter = state => state.contacts.filter;
 export default contactsSlice.reducer
+
